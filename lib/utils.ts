@@ -3,7 +3,7 @@
 import { type ClassValue, clsx } from "clsx";
 
 import { twMerge } from "tailwind-merge";
-import qs from "qs"
+import  qs from 'qs';
 import { aspectRatioOptions } from "@/constant";
 
 export function cn(...inputs: ClassValue[]) {
