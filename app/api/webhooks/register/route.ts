@@ -1,9 +1,12 @@
 /* eslint-disable camelcase */
-import { clerkClient } from "@clerk/nextjs/server";
+// import { clerkClient } from "@clerk/nextjs/server";
 import { WebhookEvent } from "@clerk/nextjs/server";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 import { Webhook } from "svix";
+import { clerkClient} from '@clerk/clerk-sdk-node';
+
+// const clerkClient = new Clerk();
 
 import { createUser, deleteUser, updateUser } from "@/lib/database/actions/user.actions";
 
