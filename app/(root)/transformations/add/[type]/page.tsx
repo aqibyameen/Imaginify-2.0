@@ -8,7 +8,7 @@ import { redirect } from 'next/navigation'
 
 
 const AddTransformationPage = async({params}:SearchParamProps) => {
-  const {type}= params
+  const {type}=await params
   const {userId} =await auth();
   console.log(userId)
   
