@@ -7,7 +7,8 @@ import { getUserById } from '@/lib/database/actions/user.actions'
 import { redirect } from 'next/navigation'
 
 
-const AddTransformationPage = async({params:{type}}:SearchParamProps) => {
+const AddTransformationPage = async({params}:SearchParamProps) => {
+  const {type}= params
   const {userId} =await auth();
   console.log(userId)
   

@@ -33,7 +33,6 @@ import MediaUploader from "./MediaUploader";
 import TransformedImage from "./TransformedImage";
 import { updateCredits } from "@/lib/database/actions/user.actions";
 import { getCldImageUrl } from "next-cloudinary";
-import { title } from "process";
 import { addImage, updateImage } from "@/lib/database/actions/image.action";
 import {useRouter}  from "next/navigation";
 
