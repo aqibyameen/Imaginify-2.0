@@ -114,7 +114,7 @@ declare type CreateUserParams = {
   };
   
   declare type SearchParamProps = {
-    param: { id: string; type?: TransformationTypeKey };
+    params: { id: string; type: TransformationTypeKey };
     searchParams: { [key: string]: string | string[] | undefined };
   };
   
