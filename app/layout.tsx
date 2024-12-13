@@ -4,6 +4,7 @@ import "./globals.css";
 import {IBM_Plex_Sans} from "next/font/google"
 import { cn } from "@/lib/utils";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "@/components/ui/toaster"
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -41,7 +42,11 @@ export default function RootLayout({
       <body
         className={cn("font-IBMPlex antialiased",IBMPlex.variable)}
       >
+        <main>
         {children}
+        </main>
+        <Toaster />
+
       </body>
     </html>
     </ClerkProvider>
