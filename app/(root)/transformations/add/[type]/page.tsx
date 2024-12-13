@@ -7,8 +7,10 @@ import { getUserById } from '@/lib/database/actions/user.actions'
 import { redirect } from 'next/navigation'
 
 
-const AddTransformationPage = async({params}:SearchParamProps) => {
-  const {type}=await params
+const AddTransformationPage = async({param}:SearchParamProps) => {
+  
+  const {type}=  param || {}
+  
   const {userId} =await auth();
   console.log(userId)
   
@@ -22,10 +24,10 @@ const AddTransformationPage = async({params}:SearchParamProps) => {
   console.log(user)
   return (
     <>
-  <Header title={transformation.title} subTitle={transformation.subTitle} />
+  <Header title={transformation?.title} subTitle={transformation?.subTitle} />
   <section className='mt-10'>
   <TransformationForm action='Add'
-      userId={user._id} type={transformation.type as TransformationTypeKey} creditBalance={user.creditBalance}  />
+      userId={user._id} type={transformation?.type as TransformationTypeKey} creditBalance={user.creditBalance}  />
    </section>
     </>
 
